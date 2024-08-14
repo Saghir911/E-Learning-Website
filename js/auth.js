@@ -63,7 +63,7 @@ let RegisterUser = (e) => {
             "user-creds",
             JSON.stringify(credentials.user)
           );
-          window.location.href = "./index.html";
+          window.location.href = "./home.html";
         })
         .catch((error) => {
           console.error("Error setting user data: ", error);
@@ -107,7 +107,7 @@ if (googleSignUpButton) {
                   })
                 );
                 sessionStorage.setItem("user-creds", JSON.stringify(user));
-                window.location.href = "/index.html";
+                window.location.href = "/home.html";
               })
               .catch((error) => {
                 console.error("Error setting user data: ", error);
@@ -125,7 +125,7 @@ if (googleSignUpButton) {
                     })
                   );
                   sessionStorage.setItem("user-creds", JSON.stringify(user));
-                  window.location.href = "./index.html";
+                  window.location.href = "./home.html";
                 }
               })
               .catch((error) => {
@@ -145,7 +145,7 @@ if (googleSignUpButton) {
               email: user.email,
             })
           );
-          window.location.href = "/index.html";
+          window.location.href = "/home.html";
         }
       })
       .catch((error) => {
@@ -173,7 +173,7 @@ let SignInUser = (e) => {
               "user-creds",
               JSON.stringify(credentials.user)
             );
-            window.location.href = "/index.html";
+            window.location.href = "/home.html";
           }
         })
         .catch((error) => {
@@ -216,7 +216,7 @@ if (googleSignInButton) {
                 })
               );
               sessionStorage.setItem("user-creds", JSON.stringify(user));
-              window.location.href = "/index.html";
+              window.location.href = "/home.html";
             } else {
               // User does not exist in the database, consider them as new user
               await set(ref(db, "UsersAuthList/" + user.uid), {
@@ -231,7 +231,7 @@ if (googleSignInButton) {
                 })
               );
               sessionStorage.setItem("user-creds", JSON.stringify(user));
-              window.location.href = "/index.html";
+              window.location.href = "/home.html";
             }
           } catch (error) {
             console.error("Error checking/setting user data: ", error);
@@ -257,7 +257,7 @@ if (googleSignInButton) {
               })
             );
             sessionStorage.setItem("user-creds", JSON.stringify(user));
-            window.location.href = "/index.html";
+            window.location.href = "/home.html";
           } catch (error) {
             console.error("Error setting user data: ", error);
           }
@@ -276,7 +276,7 @@ if (googleSignInButton) {
                 })
               );
               sessionStorage.setItem("user-creds", JSON.stringify(user));
-              window.location.href = "/index.html";
+              window.location.href = "/home.html";
             } else {
               console.error("No user data found in the database.");
             }
